@@ -1,0 +1,26 @@
+{
+  "images" : [
+    {
+      "filename" : "chef.pdf",
+      "idiom" : "universal",
+      "resizing" : {
+        "cap-insets" : {
+          "bottom" : 27,
+          "left" : 26,
+          "right" : 27,
+          "top" : 26
+        },
+        "center" : {
+          "height" : 1,
+          "mode" : "tile",
+          "width" : 1
+        },
+        "mode" : "9-part"
+      }
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
