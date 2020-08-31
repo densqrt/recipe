@@ -13,8 +13,6 @@ class TricksViewController: BaseController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        self.tabBarItem = UITabBarItem(tabBarSystemItem: .topRated, tag: 1)
         self.navigationControllerCreating(imageName: "tricks")
         
         //share button

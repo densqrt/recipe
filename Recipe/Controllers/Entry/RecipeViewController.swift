@@ -14,7 +14,6 @@ class RecipeViewController: BaseController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.tabBarItem = UITabBarItem(tabBarSystemItem: .bookmarks, tag: 0)
         self.navigationControllerCreating(imageName: "recipe")
         self.topLabelCreation(text: "Boiling eggs in 7 steps")
         self.setImage(index: index)

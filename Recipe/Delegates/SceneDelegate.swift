@@ -10,29 +10,29 @@ import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
-    var window: UIWindow?
-
-
+    var window: UIWindow? = nil
+    
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
+        
+        guard let windowScene = (scene as? UIWindowScene) else { return }
+        window = UIWindow(frame: windowScene.coordinateSpace.bounds)
+        window?.windowScene = windowScene
         
         let firstVC = RecipeViewController()
         let secondVC = TricksViewController()
         
         let firstNavBar = UINavigationController(rootViewController: firstVC)
+        firstNavBar.tabBarItem = UITabBarItem(tabBarSystemItem: .bookmarks, tag: 0)
+
         let secondNavBar = UINavigationController(rootViewController: secondVC)
-        
+        secondNavBar.tabBarItem = UITabBarItem(tabBarSystemItem: .topRated, tag: 1)
+
         let tabBarVC = UITabBarController()
         tabBarVC.setViewControllers([firstNavBar, secondNavBar], animated: true)
-        
-        secondVC.loadViewIfNeeded()
-        
+                
         self.window?.backgroundColor = .white
         self.window?.rootViewController = tabBarVC
         self.window?.makeKeyAndVisible()
-        
-        
-        
-        guard let _ = (scene as? UIWindowScene) else { return }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
